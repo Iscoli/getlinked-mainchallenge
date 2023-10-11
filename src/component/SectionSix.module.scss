@@ -1,0 +1,254 @@
+.line{
+  border: 1px solid rgba(255, 255, 255, 0.18);
+background: #140D27;
+margin-top:60px;
+}
+
+
+.SectionSix{
+  margin-bottom:30px;
+
+  .TimeLine{
+    color: #FFF;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+  }
+  .breakdown{
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom:50px;
+  }
+
+  
+    .line2{
+      width: 2px;
+      height: 77px;
+      background: #D434FE;
+     
+    }
+    .borderNumber{
+      border-radius: 26.5px;
+      width: 19.32px;
+      height: 19.32px;
+      flex-shrink: 0;
+      background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+    }
+   .number{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 43%;
+    top: 40%;
+   }
+
+   .numberDiv{
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 26.5px;
+background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+position: relative;
+
+margin-left: -25px;
+   }
+    
+  
+  
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:750px) {
+  .majorContainer{
+    display: block;
+    margin-top:-23px;
+  }
+  .flexDiv{
+    display:block;
+  
+   }
+    .TimeLine3{
+      display: flex;
+      flex-direction: column;
+      margin: 0 50%;
+      justify-content: center;
+    }
+    .textDiv{
+      display: flex;
+      justify-content:space-around;
+      & .text1{
+        flex-basis:35%;
+       
+      }
+      & .text2{
+        flex-basis: 30%;
+        margin-top: -10px;
+      }
+    }
+    .textDiv{
+      margin-top:-64px;
+     }
+     
+    
+     .purpleLeft{
+      color: #D434FE;
+       font-family: Montserrat;
+       font-size:19px;
+       font-style: normal;
+       font-weight: 700;
+       line-height: normal;
+       text-align: left;
+    
+      }
+
+      
+      .purpleRight{
+        color: #D434FE;
+         font-family: Montserrat;
+         font-size:19px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: normal;
+         text-align:right;
+      
+        }
+  
+        .p1{
+          color: #FFF;
+          text-align:left;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 170.9%; /* 23.926px */
+        }
+
+
+
+
+
+    
+       .p1Right{
+         color: #FFF;
+         text-align:right;
+         font-family: Montserrat;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 170.9%; /* 23.926px */
+       }
+
+       .tall{
+        margin-top: -90px;
+      }
+
+
+      .numberDiv{
+        width: 53px;
+        height: 53px;
+        flex-shrink: 0;
+        border-radius: 26.5px;
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+    position: relative;
+    margin: 10px;
+    margin-bottom: 50px;
+    margin-left: -25px;
+       }
+}
+
+
+
+
+
+@media (max-width:750px) {
+ .majorContainer{
+  display: flex;
+  margin: 30px;
+ }
+ .textDiv{
+  margin-top:14px;
+ }
+ .flexDiv{
+  display:flex;
+  flex-direction: column-reverse;
+ }
+ .purpleLeft{
+  color: #D434FE;
+   font-family: Montserrat;
+   font-size:19px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   text-align: left;
+  }
+
+  
+  .purpleRight{
+    color: #D434FE;
+     font-family: Montserrat;
+     font-size:19px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+     text-align:left;
+    }
+
+    .purpleRight1{
+      color: #D434FE;
+       font-family: Montserrat;
+       font-size:19px;
+       font-style: normal;
+       font-weight: 700;
+       line-height: normal;
+       text-align:left;
+      }
+
+    .p1{
+      color: #FFF;
+      text-align:left;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 170.9%; /* 23.926px */
+    }
+
+
+
+
+
+
+   .p1Right{
+     color: #FFF;
+     text-align:left;
+     font-family: Montserrat;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 170.9%; /* 23.926px */
+   }
+
+}

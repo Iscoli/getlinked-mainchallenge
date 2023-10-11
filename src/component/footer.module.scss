@@ -1,0 +1,23 @@
+
+.MainContainer{
+  background: #100B20;
+}
+
+.flexContainer{
+  @media(min-width:750px){
+    display: flex;
+  justify-content: space-around;
+  
+  & .sec1{
+    flex-basis:40%;
+  }
+  & .sec2{
+    flex-basis:20%;
+  }
+  & .sec3{
+    flex-basis:20%;
+  }
+  }
+  
+ 
+}

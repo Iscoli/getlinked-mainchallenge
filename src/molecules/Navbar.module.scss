@@ -1,0 +1,58 @@
+
+.navbarContainer{
+  display: flex;
+  justify-content: space-around;
+  // padding-top:17px;
+  align-items: center;
+  
+& button {
+  border-radius: 4px;
+background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+width:130px;
+height: 33px;
+flex-shrink: 0;
+}
+ 
+}
+
+
+
+
+.getLinked{
+
+
+  color: #FFF;
+font-family: Clash Display;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+& span{
+  color: #D434FE;
+font-family: Clash Display;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+}
+
+.navLinks{
+  
+  display: flex;
+  justify-content:space-between;
+  & p{
+   padding:10px;
+ }
+}
+
+
+
+
+
+.Line1{
+  background: rgba(255, 255, 255, 0.18);
+  width: 100%;
+  height: 1px;
+  margin: 10px;
+}

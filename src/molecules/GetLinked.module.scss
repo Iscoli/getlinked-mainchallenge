@@ -1,0 +1,166 @@
+
+.getLinkSection{
+  @media(min-width:750px){
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+
+.getLink{
+  .getTech{
+    @media(max-width:500px){
+     text-align: center;
+    margin-left: 12px;
+    font-size:43px;
+    }
+
+    color: #FFF;
+    font-family: Clash Display;
+    font-size:63px; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+ 
+
+  & .Hackathon{
+    display: flex;
+    align-items: center;
+  }
+
+  & .participate{
+  
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166%; /* 33.2px */
+    text-align: center;
+    margin: 10px  15px;
+  }
+  & button{
+    border-radius: 4px;
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+    width: 152px;
+    height: 46.837px;
+    flex-shrink: 0;
+    margin: 10px;
+    margin-left: 90px;
+      }
+ 
+}
+
+
+
+ .Hackathon{
+  span{
+    color: #D434FE;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+ }
+
+
+
+
+
+
+
+
+
+.purple{
+  position: absolute;
+  width: 470px;
+  height: 46vh;
+  margin-top:-30px;
+  left:-30%;
+}
+
+.vector{
+  display:flex;
+  justify-content: flex-end;
+  & img{
+    padding: 5px;
+    padding-right:31px;
+  }
+}
+
+.igniting {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size:3vw; /* Adjust this value based on your preference */
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  text-align: right;
+  margin-right: 2%; /* Adjust the right margin for spacing */
+}
+
+
+
+.time{
+  color: #FFF;
+  font-family: Unica One;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%; /* 63.84px */
+  margin: 10px;
+  margin-left:70px;
+ span{
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+ }
+}
+
+
+
+
+
+
+
+.ManSection{
+  position: relative;
+   .man{
+  width:100%;
+  }
+  & .water{
+   position: absolute;
+    width:320px;
+    margin: 10px;
+    
+  }
+}
+
+
+/* Define the rotation animation */
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to the rotatingImage class */
+.rotatingImage {
+  animation: rotate360 25s linear infinite; /* 5s duration, linear easing, infinite loop */
+  transform-origin: center center;
+}
