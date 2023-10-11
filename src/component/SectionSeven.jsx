@@ -68,8 +68,8 @@ function SectionSeven() {
   return (
     <section style={{ position: "relative" }} className={styles.Maincontainer}>
       <div className={styles.header}>
-        <p>Prices and</p>
-        <p>Rewards</p>
+        <p className={styles.price}>Prices and</p>
+        <p className={styles.rewards}>Rewards</p>
       </div>
 
       <img className={styles.wuta1} src={wuta1} />

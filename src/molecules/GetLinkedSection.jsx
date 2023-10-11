@@ -53,7 +53,14 @@ function GetLinkedSection() {
             animate={{
               x: 0,
             }}
-            transition={{ type: "spring", duration: 4, bounce: 0.3 }}
+            transition={{
+              type: "spring",
+              delay: 1,
+              mass: 0.4,
+              damping: 8,
+              duration: 9,
+              bounce: 0.3,
+            }}
           >
             <p className={styles.getTech}>getlinked Tech</p>
 
@@ -91,7 +98,14 @@ function GetLinkedSection() {
           animate={{
             x: 0,
           }}
-          transition={{ type: "spring", duration: 4, bounce: 0.3 }}
+          transition={{
+            type: "spring",
+            delay: 1,
+            mass: 0.4,
+            damping: 8,
+            duration: 9,
+            bounce: 0.3,
+          }}
           className={styles.ManSection}
         >
           <div className={styles.rotatingImageContainer}>

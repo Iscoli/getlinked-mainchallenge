@@ -11,7 +11,16 @@ function Footer() {
     <section className={styles.MainContainer}>
       <div className={styles.flexContainer}>
         <div className={styles.sec1}>
-          <p>getlinked</p>
+          <p
+           style={{fontSize:'24px'}}
+          >get
+            <span 
+             style={{fontSize:'24px'}}
+           className={styles.color}
+          >
+            linked
+          </span>
+          </p>
           <p>
             Getlinked Tech Hackathon is a technology innovation program
             established by a group of organizations with the aim of showcasing
@@ -25,21 +34,38 @@ function Footer() {
         </div>
 
         <div className={styles.sec2}>
-          <p>useful Links</p>
+          <p
+          className={styles.color}
+          >useful Links</p>
           <p>overveiw</p>
           <p>TimeLine</p>
           <p>FAQS</p>
           <p>Register</p>
           <p>
-            Follow Us
-            <img src={facebook} />
-            <img src={twitter} />
-            <img src={instagram} />
-            <img src={linkedel} />
+             <span
+             className={styles.color}
+             > Follow Us</span>  
+            <img 
+             className={styles.social}
+            src={facebook} />
+            <img 
+              className={styles.social}
+            src={twitter} />
+            <img
+               className={styles.social}
+            src={instagram} />
+            <img 
+              className={styles.social}
+            src={linkedel} />
           </p>
         </div>
 
         <div className={styles.sec3}>
+          <p
+          className={styles.color}
+          >
+            contact
+          </p>
           <p>
             <img src={phone} />
             +234 6707653444

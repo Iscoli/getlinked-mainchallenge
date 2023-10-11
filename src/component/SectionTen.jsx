@@ -90,7 +90,9 @@ function SectionTen() {
               sites, for your project developement
             </p>
 
-            <p>Read More</p>
+            <p 
+             className={styles.btn}
+            >Read More</p>
           </div>
         </motion.div>
 

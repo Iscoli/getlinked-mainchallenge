@@ -8,7 +8,29 @@
   margin:100px 0;
   position: relative;
 
+  .price{
+    color: #FFF;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .rewards{
+    
+    color: #D434FE;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
   .header{
+    @media(max-width:750px){
+      text-align: center;
+      margin: 0 0;
+    }
     margin-left: 50%;
    }
 

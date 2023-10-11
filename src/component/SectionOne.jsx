@@ -4,10 +4,9 @@ import Navbar from "../molecules/Navbar";
 
 function YourComponent() {
   return (
-    <header
-    className={styles.mainHeader}>
+    <header className={styles.mainHeader}>
       <Navbar />
-      <GetLinkedSection/>
+      <GetLinkedSection />
     </header>
   );
 }
