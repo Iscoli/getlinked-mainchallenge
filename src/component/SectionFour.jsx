@@ -168,7 +168,7 @@ const listVarient ={
             <motion.p  
             variants={listVarient}
             className={styles.text}>
-              <span> Functionality: </span> Assess how well the solution works.
+              <span> Functionality:</span> Assess how well the solution works.
               Does it perform its intended functions effectively and without
               major issues? Judges would consider the completeness and
               robustness of the solution.
