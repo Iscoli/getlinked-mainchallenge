@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import teacher from "../assets/teacher.png";
+import teacher from "../assets/Teacher.png";
 import styles from "./SectionFour.module.scss";
 import purple from "../assets/purple-Lens-Flare3.png";
 import purple1 from "../assets/purple-Lens-Flare3.png";
