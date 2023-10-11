@@ -116,13 +116,17 @@ const listVarient ={
 
   return (
     <>
-      <div className={styles.line}></div>
+      <div 
+      
+      className={styles.line}></div>
       <section
-        ref={arrowRef}
+       
         style={{ position: "relative" }}
         className={styles.SectionFour}
       >
-        <div>
+        <div
+         ref={arrowRef}
+        >
           <img className={styles.purple} src={purple} />
 
           <img className={styles.purple1} src={purple1} />
