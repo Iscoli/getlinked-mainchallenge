@@ -1,13 +1,21 @@
+@use '../styles/mixing' as mixin;
+
+
+
 
 .navbarContainer{
   display: flex;
   justify-content: space-around;
+ 
   // padding-top:17px;
   align-items: center;
   margin:10px 0px;
   width: 100%;
-  min-width: unset;
-  position: relative;
+  position:fixed;
+  background-color:mixin.$primary-color;
+  padding: 20px 0;
+  top:-10px;
+  z-index: 1;
 
   & button {
     border-radius: 4px;
@@ -51,7 +59,7 @@
   }
 
   .modal{
-    position: absolute;
+    position:fixed;
     width: 100%;
     top: 0;
     padding:30px 26px;
@@ -81,5 +89,5 @@
     background: rgba(255, 255, 255, 0.18);
     width: 100%;
     height: 1px;
-    margin: 10px;
+    padding-bottom: 10px;
   }

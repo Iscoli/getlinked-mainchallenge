@@ -135,8 +135,9 @@ function NavBar() {
             <button className={styles.btn}>Register</button>
           </div>
         )}
+      
       </div>
-      <div className={styles.Line1}></div>
+      
     </>
   );
 }

@@ -31,10 +31,17 @@ function GetLinkedSection() {
   const scrollRef = useRef(null);
 
   return (
-    <>
+    <div
+    style={{marginTop:'80px',
+     }}
+    className={styles.majorContainer}>
+     <span
+      
+     className={styles.Line1}></span>
       <p
         className={styles.igniting}
-        style={{ textAlign: "right", paddingRight: "28px" }}
+        style={{ textAlign: "right", paddingRight: "28px",
+         marginTop:'20px' }}
         ref={scrollRef}
       >
         Igniting a Revolution in HR Innovation
@@ -118,7 +125,7 @@ function GetLinkedSection() {
           <img className={styles.man} src={man} />
         </motion.div>
       </section>
-    </>
+    </div>
   );
 }
 

@@ -8,20 +8,14 @@ import styles from "./footer.module.scss";
 
 function Footer() {
   return (
-    <section 
-    id='contact'
-    className={styles.MainContainer}>
+    <section id="contact" className={styles.MainContainer}>
       <div className={styles.flexContainer}>
         <div className={styles.sec1}>
-          <p
-           style={{fontSize:'24px'}}
-          >get
-            <span 
-             style={{fontSize:'24px'}}
-           className={styles.color}
-          >
-            linked
-          </span>
+          <p style={{ fontSize: "24px" }}>
+            get
+            <span style={{ fontSize: "24px" }} className={styles.color}>
+              linked
+            </span>
           </p>
           <p>
             Getlinked Tech Hackathon is a technology innovation program
@@ -36,38 +30,22 @@ function Footer() {
         </div>
 
         <div className={styles.sec2}>
-          <p
-          className={styles.color}
-          >useful Links</p>
+          <p className={styles.color}>useful Links</p>
           <p>overveiw</p>
           <p>TimeLine</p>
           <p>FAQS</p>
           <p>Register</p>
           <p>
-             <span
-             className={styles.color}
-             > Follow Us</span>  
-            <img 
-             className={styles.social}
-            src={facebook} />
-            <img 
-              className={styles.social}
-            src={twitter} />
-            <img
-               className={styles.social}
-            src={instagram} />
-            <img 
-              className={styles.social}
-            src={linkedel} />
+            <span className={styles.color}> Follow Us</span>
+            <img className={styles.social} src={facebook} />
+            <img className={styles.social} src={twitter} />
+            <img className={styles.social} src={instagram} />
+            <img className={styles.social} src={linkedel} />
           </p>
         </div>
 
         <div className={styles.sec3}>
-          <p
-          className={styles.color}
-          >
-            contact
-          </p>
+          <p className={styles.color}>contact</p>
           <p>
             <img src={phone} />
             +234 6707653444
