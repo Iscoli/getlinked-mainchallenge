@@ -8,7 +8,9 @@ import styles from "./footer.module.scss";
 
 function Footer() {
   return (
-    <section className={styles.MainContainer}>
+    <section 
+    id='contact'
+    className={styles.MainContainer}>
       <div className={styles.flexContainer}>
         <div className={styles.sec1}>
           <p

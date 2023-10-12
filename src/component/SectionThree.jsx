@@ -24,7 +24,9 @@ function SectionThree() {
   return (
     <>   
     <div className={styles.line}></div>
-     <section className={styles.SectionThree}
+     <section 
+     id='overview'
+     className={styles.SectionThree}
     ref={arrowRef}
     style={{position:'relative'}}
     >
