@@ -9,6 +9,7 @@ import water from "../assets/water.png";
 import man from "../assets/man.png";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 function GetLinkedSection() {
   const [time, setTime] = useState(new Date());
@@ -87,7 +88,12 @@ function GetLinkedSection() {
               chance to win a Big prize
             </p>
 
+            <Link
+           style={{ textDecoration: "none", color: "#fff" }}
+           to='/register'
+           >
             <button>Register</button>
+          </Link>
 
             <p className={styles.time}>
               {hours}

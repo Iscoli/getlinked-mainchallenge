@@ -8,10 +8,13 @@ import linkedel from "../../assets/linkedel.svg";
 import axios from "axios";
 import { toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {  useNavigate } from "react-router-dom";
 
 
 
 function Main() {
+   const nav = useNavigate()
+
   const [form, setForm] = useState({
     firstname: "",
     email: "",
@@ -70,6 +73,15 @@ function Main() {
           },
         });
          toast.success('your message has been sent succefully')
+
+         setForm({
+          firstname: '',
+          email: '', 
+          phone:'',
+          message: '',
+        })
+
+        nav('/')
         // Handle a successful response here
         console.log("Response:", response.data);
       } catch (error) {

@@ -5,17 +5,17 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./global.scss";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 function App() {
   return (
     <>
       <Router>
-        <div
-        className="main-container"
-        >
+        <div className="main-container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
         <ToastContainer />

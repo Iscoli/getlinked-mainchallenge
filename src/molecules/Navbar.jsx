@@ -82,7 +82,13 @@ function NavBar() {
         </div>
         <div>
           {isLargeScreen ? (
-            <button>Register</button>
+           <Link
+           style={{ textDecoration: "none", color: "#fff" }}
+           to='/register'
+           > <button>
+              Register
+              </button>
+              </Link>
           ) : (
             <div onClick={Modal}>
               <img style={{ cursor: "pionter" }} src={MySVGIcon} />
