@@ -101,10 +101,16 @@ function NavBar() {
                 marginBottom: "30px",
               }}
             >
+               <Link
+         style={{ textDecoration: "none", color: "#fff" }}
+          to='/'
+         >
               <p>
                 get
                 <span>Linked</span>
               </p>
+              </Link>
+
               <img onClick={Modal} src={closeIcon} />
             </div>
             <p>
