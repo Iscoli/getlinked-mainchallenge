@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
 import MySVGIcon from "../assets/hambuger.svg";
 import closeIcon from "../assets/Close.svg";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [modal, setModal] = useState(false);
@@ -38,9 +39,13 @@ function NavBar() {
     <>
       <nav className={styles.navbarContainer}>
         <div className={styles.getLinked}>
-          <p>
+         <Link
+         style={{ textDecoration: "none", color: "#fff" }}
+          to='/'
+         > <p>
             get<span className={styles.getLinkedSpan}>Linked</span>
           </p>
+          </Link>
         </div>
         <div
           className={styles.navLinks}
@@ -68,12 +73,11 @@ function NavBar() {
             </a>
           </p>
           <p>
-            <a
-              style={{ textDecoration: "none", color: "#fff" }}
-              href="#contact"
-            >
+            <Link 
+            style={{ textDecoration: "none", color: "#fff" }}
+            to='/contact'>
               Contact{" "}
-            </a>
+              </Link>
           </p>
         </div>
         <div>
