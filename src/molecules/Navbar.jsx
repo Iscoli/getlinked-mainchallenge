@@ -147,7 +147,11 @@ function NavBar() {
               Contact{" "}
               </Link>
             </p>
-            <button className={styles.btn}>Register</button>
+            <Link
+           style={{ textDecoration: "none", color: "#fff" }}
+           to='/register'
+           > 
+           <button className={styles.btn}>Register</button></Link>
           </div>
         )}
       
