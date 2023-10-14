@@ -47,12 +47,14 @@ function SectionNine() {
 
       <img className={styles.light2} src={light} />
 
-      <p 
-       className={styles.patners}
-      style={{ textAlign: "center" }}>Partners and Sponsors</p>
-      <p 
-       className={styles.sponsors}
-      ref={arrowRef} style={{ textAlign: "center" }}>
+      <p className={styles.patners} style={{ textAlign: "center" }}>
+        Partners and Sponsors
+      </p>
+      <p
+        className={styles.sponsors}
+        ref={arrowRef}
+        style={{ textAlign: "center" }}
+      >
         Getlinked Hackathon 1.0 is honored to have the following major companies
         as its partners and sponsors.
       </p>

@@ -45,9 +45,7 @@ function SectionSix() {
   return (
     <>
       <div className={styles.line}></div>
-      <section 
-      id="timeline"
-      className={styles.SectionSix}>
+      <section id="timeline" className={styles.SectionSix}>
         <p className={styles.TimeLine}>Timeline</p>
         <p ref={arrowRef} className={styles.breakdown}>
           Here is the breakdown of the time we anticipate using for the upcoming

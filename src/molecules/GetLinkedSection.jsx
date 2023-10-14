@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./GetLinked.module.scss";
 import purple from "../assets/purple-flare.png";
+import star1  from '../assets/star1.png';
+import star2  from '../assets/star.png'
 import VectorLogo from "../assets/Vector.svg";
 import chain from "../assets/chain.png";
 import cracker from "../assets/cracker.png";
@@ -55,7 +57,18 @@ function GetLinkedSection() {
       <section className={styles.getLinkSection}>
         <div style={{ position: "relative" }} className={styles.getLink}>
           <img src={purple} className={styles.purple} />
+          
+          <img 
+        src={star1} 
+        className={`${styles.star1} ${styles.blink}`} />
 
+         <img 
+        src={star2} 
+        className={`${styles.star2} ${styles.blink2}`} />
+
+        <img 
+        src={star1} 
+        className={`${styles.star3} ${styles.blink3}`} />
           <motion.div
             initial={{ x: "-100vw" }}
             animate={{
@@ -121,7 +134,10 @@ function GetLinkedSection() {
           }}
           className={styles.ManSection}
         >
-          <div className={styles.rotatingImageContainer}>
+          <div
+           style={{position:"relative"}}
+          className={styles.rotatingImageContainer}>
+         
             <img
               className={`${styles.rotatingImage} ${styles.water}`}
               src={water}

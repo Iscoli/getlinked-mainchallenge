@@ -4,13 +4,14 @@ import styles from "./Navbar.module.scss";
 import MySVGIcon from "../assets/hambuger.svg";
 import closeIcon from "../assets/Close.svg";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 function NavBar() {
   const [modal, setModal] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(
     window.matchMedia("(min-width: 700px)").matches
   );
-
+  
   useEffect(() => {
     // Define a media query
     const mediaQuery = window.matchMedia("(min-width:700px)");
@@ -34,7 +35,42 @@ function NavBar() {
     console.log("hello world");
     setModal(!modal);
   };
-  console.log(modal);
+  const menuVars = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+    exit: {
+      scaleY: 0,
+      transition: {
+        delay: 0.5,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const containerVars = {
+    initial: {
+      transition: {
+        staggerChildren: 0.09,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.09,
+        staggerDirection: 1,
+      },
+    },
+  };
   return (
     <>
       <nav className={styles.navbarContainer}>
@@ -98,8 +134,15 @@ function NavBar() {
       </nav>
 
       <div styles={{ position: "relative" }}>
+     <AnimatePresence>
         {modal && (
-          <div className={styles.modal}>
+          <motion.div 
+          variants={menuVars}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className={styles.modal}
+          style={{transformOrigin:'top'}}>
             <div
               style={{
                 display: "flex",
@@ -119,6 +162,12 @@ function NavBar() {
 
               <img onClick={Modal} src={closeIcon} />
             </div>
+            <motion.div
+             variants={containerVars}
+             initial="initial"
+             animate="open"
+             exit="initial"
+            >
             <p>
               <a
                 style={{ textDecoration: "none", color: "#fff" }}
@@ -152,9 +201,10 @@ function NavBar() {
            to='/register'
            > 
            <button className={styles.btn}>Register</button></Link>
-          </div>
+           </motion.div>
+          </motion.div>
         )}
-      
+       </AnimatePresence>
       </div>
       
     </>
