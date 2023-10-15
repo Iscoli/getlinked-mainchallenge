@@ -1,6 +1,11 @@
 import styles from "../component/SectionSix.module.scss";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import star2 from "../assets/star1.png";
+import star1 from "../assets/star.png";
+import star3 from "../assets/star22.png";
+
+
 
 function SectionSix() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
@@ -51,7 +56,18 @@ function SectionSix() {
           Here is the breakdown of the time we anticipate using for the upcoming
           event.
         </p>
-
+        <img
+           src={star3}
+           className={`${styles.star3} ${styles.blink}`}
+          />
+          <img
+           src={star1}
+           className={`${styles.star1} ${styles.blink2}`}
+          />
+          <img
+           src={star2}
+           className={`${styles.star2} ${styles.blink3}`}
+          />
         <motion.div
           variants={boxVariant}
           animate={arrowInView ? "visible" : "hidden"}

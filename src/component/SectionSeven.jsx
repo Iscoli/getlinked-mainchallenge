@@ -8,6 +8,8 @@ import wuta1 from "../assets/purple-flare.png";
 import wuta2 from "../assets/purple-Lens-Flare3.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import star1 from "../assets/star.png";
+import star3 from "../assets/star22.png";
 
 function SectionSeven() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
@@ -75,7 +77,14 @@ function SectionSeven() {
       <img className={styles.wuta1} src={wuta1} />
       <img className={styles.wuta2} src={wuta2} />
 
-      <div ref={arrowRef} className={styles.subContainer}>
+      <div
+        ref={arrowRef}
+        style={{ position: "relative" }}
+        className={styles.subContainer}
+      >
+        <img src={star3} className={`${styles.star1} ${styles.blink}`} />
+
+        <img src={star1} className={`${styles.star2} ${styles.blink3}`} />
         <motion.article
           variants={arrowVariant}
           animate={arrowInView ? "visible" : "hidden"}
@@ -85,7 +94,11 @@ function SectionSeven() {
           <img src={cupy} />
         </motion.article>
 
-        <div style={{ flexBasis: "50%" }} ref={introductionRef}>
+        <div
+          style={{ flexBasis: "50%", position: "relative" }}
+          ref={introductionRef}
+        >
+          <img src={star1} className={`${styles.star3} ${styles.blink2}`} />
           <motion.article
             variants={boxVariant}
             animate={introductionInView ? "visible" : "hidden"}

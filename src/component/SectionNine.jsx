@@ -4,6 +4,9 @@ import pixel1 from "../assets/pixel1.png";
 import pixel2 from "../assets/pixel2.png";
 import pixel3 from "../assets/pixel3.png";
 import pixel4 from "../assets/pixel4.png";
+import star2 from "../assets/star1.png";
+import star1 from "../assets/star.png";
+import star3 from "../assets/star22.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import light from "../assets/purple-flare.png";
@@ -46,7 +49,9 @@ function SectionNine() {
       <img className={styles.light1} src={light} />
 
       <img className={styles.light2} src={light} />
-
+      
+      <img src={star3} className={`${styles.star1} ${styles.blink}`} />
+      <img src={star1} className={`${styles.star2} ${styles.blink3}`} />
       <p className={styles.patners} style={{ textAlign: "center" }}>
         Partners and Sponsors
       </p>

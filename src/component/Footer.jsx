@@ -5,12 +5,20 @@ import linkedel from "../assets/linkedel.svg";
 import phone from "../assets/phone.svg";
 import location from "../assets/location.svg";
 import styles from "./footer.module.scss";
+import star2 from "../assets/star1.png";
+import star1 from "../assets/star.png";
+import star3 from "../assets/star22.png";
+
+
+
 
 function Footer() {
   return (
     <section id="contact" className={styles.MainContainer}>
+      <img src={star3} className={`${styles.star4} ${styles.blink}`} />
       <div className={styles.flexContainer}>
         <div className={styles.sec1}>
+        <img src={star1} className={`${styles.star1} ${styles.blink3}`} />
           <p style={{ fontSize: "24px" }}>
             get
             <span style={{ fontSize: "24px" }} className={styles.color}>
@@ -30,6 +38,7 @@ function Footer() {
         </div>
 
         <div className={styles.sec2}>
+        <img src={star2} className={`${styles.star2} ${styles.blink}`} />
           <p className={styles.color}>useful Links</p>
           <p>overveiw</p>
           <p>TimeLine</p>
@@ -44,7 +53,10 @@ function Footer() {
           </p>
         </div>
 
-        <div className={styles.sec3}>
+        <div 
+        style={{position:'relative'}}
+        className={styles.sec3}>
+        <img src={star1} className={`${styles.star3} ${styles.blink3}`} />
           <p className={styles.color}>contact</p>
           <p>
             <img src={phone} />

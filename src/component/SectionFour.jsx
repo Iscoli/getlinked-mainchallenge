@@ -9,7 +9,6 @@ import star2 from "../assets/star1.png";
 import star1 from "../assets/star.png";
 import star3 from "../assets/star22.png";
 
-
 function SectionFour() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
     threshold: 0.5, // Adjust the threshold as needed for larger screens
@@ -68,19 +67,22 @@ function SectionFour() {
     <>
       <div className={styles.line}></div>
       <section style={{ position: "relative" }} className={styles.SectionFour}>
-
-      <img className={`${styles.star1} 
-      ${styles.blink}`} 
-      src={star1} />
-      <img 
-      className={`${styles.star2} 
+        <img
+          className={`${styles.star1} 
+      ${styles.blink}`}
+          src={star1}
+        />
+        <img
+          className={`${styles.star2} 
       ${styles.blink2}`}
-      src={star2} />
+          src={star2}
+        />
 
-      <img 
-      className={`${styles.star3} 
+        <img
+          className={`${styles.star3} 
       ${styles.blink3}`}
-      src={star3} />
+          src={star3}
+        />
 
         <div ref={arrowRef}>
           <img className={styles.purple} src={purple} />

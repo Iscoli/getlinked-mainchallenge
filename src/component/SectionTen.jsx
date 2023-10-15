@@ -3,6 +3,12 @@ import virus from "../assets/virus.svg";
 import kwado from "../assets/kwado.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import star2 from "../assets/star1.png";
+import star1 from "../assets/star.png";
+import star3 from "../assets/star22.png";
+
+
+
 
 function SectionTen() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
@@ -53,24 +59,38 @@ function SectionTen() {
     <>
       <div className={styles.line}></div>
       <section ref={arrowRef} className={styles.container}>
+        
         <motion.div
           variants={arrowVariant}
           animate={arrowInView ? "visible" : "hidden"}
           initial="hidden"
           className={styles.sec1}
         >
-          <div className={styles.title}>
-            <p>Privacy Policy</p>
-            <p> and Terms</p>
-            <p>Last updated on September 12, 2023</p>
-            <p>
+          <div 
+           style={{position:"relative"}}
+          className={styles.title}>
+            <img 
+            className={`${styles.star1} ${styles.blink}`}
+            src={star2}
+            />
+            <p
+            className={styles.p1}
+            >Privacy Policy and </p>
+            <p
+             className={styles.p2}
+            > Terms</p>
+            <p
+            className={styles.p3}
+            >Last updated on September 12, 2023</p>
+            <p
+             className={styles.p3}
+            >
               Below are our privacy & policy, which outline a lot of goodies.
               it’s our aim to always take of our participant
             </p>
           </div>
           <div className={styles.box}>
             <p>
-              {" "}
               At getlinked tech Hackathon 1.0, we value your privacy and are
               committed to protecting your personal information. This Privacy
               Policy outlines how we collect, use, disclose, and safeguard your
@@ -96,7 +116,33 @@ function SectionTen() {
           </div>
         </motion.div>
 
-        <div ref={introductionRef}>
+        <div 
+        style={{position:'relative'}}
+        ref={introductionRef}>
+        <img 
+           className={`${styles.star2} ${styles.blink2}`}
+            src={star3}
+            />
+
+           <img 
+           className={`${styles.star3} ${styles.blink3}`}
+            src={star1}
+            />
+
+            <img 
+            className={`${styles.star4} ${styles.blink}`}
+            src={star1}
+            />
+
+            <img 
+           className={`${styles.star5} ${styles.blink2}`}
+            src={star3}
+            />
+
+            <img 
+            className={`${styles.star6} ${styles.blink3}`}
+            src={star2}
+            />
           <motion.div
             variants={boxVariant}
             animate={arrowInView ? "visible" : "hidden"}

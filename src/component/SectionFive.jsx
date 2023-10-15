@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "./SectionFive.module.scss";
 import { useEffect } from "react";
+import star2 from "../assets/star1.png";
+import star1 from "../assets/star.png";
+import star3 from "../assets/star22.png";
+import star4 from "../assets/star21.png";
+
 
 function SectionFive() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
@@ -84,7 +89,28 @@ function SectionFive() {
         ref={arrowRef}
         style={{ position: "relative" }}
       >
-        <div>
+        <div 
+        style={{position:'relative'}}
+        >
+           <img
+           src={star4}
+           className={`${styles.star4} ${styles.blink1}`}
+          />
+           <img
+           src={star4}
+           className={`${styles.star5} ${styles.blink2}`}
+          />
+
+          <img
+           src={star2}
+           className={`${styles.star6} ${styles.blink3}`}
+          />
+
+          <img
+           src={star1}
+           className={`${styles.star7} ${styles.blink}`}
+          />
+          
           <motion.div
             variants={arrowVariant}
             animate={arrowInView ? "visible" : "hidden"}
@@ -108,7 +134,14 @@ function SectionFive() {
           </motion.div>
         </div>
 
-        <div className={styles.introduction} ref={introductionRef}>
+        <div className={styles.introduction} ref={introductionRef}
+        style={{position:'relative'}}
+        >
+
+        <img
+           src={star3}
+           className={`${styles.star3} ${styles.blink}`}
+          />
           <motion.div
             variants={boxVariant}
             animate={introductionInView ? "visible" : "hidden"}
@@ -116,13 +149,12 @@ function SectionFive() {
             className={styles.introduction}
           >
             <div style={{ marginBottom: "40px" }}>
-              <p>Frequently Ask</p>
-              <p>Question</p>
+              <p className={styles.p1}>Frequently Ask</p>
+              <p className={styles.p2}>Question</p>
 
-              <p>
-                {" "}
+              <p className={styles.p3}>
                 We got answers to the questions that you might want to ask about
-                getlinked Hackathon 1.0{" "}
+                getlinked Hackathon 1.0
               </p>
             </div>
 
