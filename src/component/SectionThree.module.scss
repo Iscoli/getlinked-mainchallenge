@@ -115,3 +115,53 @@ margin-top:60px;
   top: 0;
  
 }
+
+
+
+.star2{
+  @media(min-width:750px){
+    position: absolute;
+  top: 15%;
+  left: 39%;
+  }
+  position: absolute;
+  top: 15%;
+  left:4%;
+  
+}
+
+
+
+
+.star1{
+  @media(max-width:750px){
+    position: absolute;
+    top: 100%;
+  }
+  position: absolute;
+  top: 80%;
+}
+
+
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink {
+  animation: blink 2s ease infinite; /* Adjust the duration as needed */
+}
+
+
+@keyframes blink2 {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink2 {
+  animation: blink 2s ease infinite; /* Adjust the duration as needed */
+}

@@ -5,6 +5,8 @@ import styles from "./SectionThree.module.scss";
 import { useEffect } from "react";
 import purple1 from "../assets/purple-Lens-1.png";
 import purple from "../assets/purple-lens.png";
+import star2 from "../assets/star1.png";
+import star1 from "../assets/star.png";
 
 function SectionThree() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
@@ -29,6 +31,9 @@ function SectionThree() {
         ref={arrowRef}
         style={{ position: "relative" }}
       >
+        <img className={`${styles.star2}  ${styles.blink2}`} src={star2} />
+        <img className={`${styles.star1}  ${styles.blink}`} src={star1} />
+
         <div>
           <img className={styles.purple1} src={purple1} />
           <img className={styles.purple} src={purple} />

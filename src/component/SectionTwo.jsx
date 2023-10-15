@@ -4,6 +4,9 @@ import arrow from "../assets/arrow.png";
 import styles from "./SectionTwo.module.scss";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import star1  from '../assets/star21.png';
+import star2  from '../assets/star22.png';
+
 
 function SectionTwo() {
   const {ref:arrowRef, inView:arrowInView} = useInView({
@@ -26,7 +29,10 @@ function SectionTwo() {
     <section className={styles.SectionTwo}
     ref={arrowRef}
     >
-      
+      <img
+      className={`${styles.star1}  ${styles.blink}`}
+      src={star1}
+      />
       <motion.div
         initial={{ x: "-100vw" }}
         animate={arrowInView ? { x: 0 } : { x: "-100vw" }}
@@ -55,7 +61,12 @@ function SectionTwo() {
 
         <div 
           className={styles.introduction}
-        ref={introductionRef}>
+        ref={introductionRef}
+        >
+          <img 
+          className={`${styles.star2} ${styles.blink2}`}
+          src={star2}
+          />
       <motion.div
         initial={{ x: "100vw" }}
         animate={introductionInView ? { x: 0 } : { x: "100vw" }}
