@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 function MainComponent() {
   const nav = useNavigate();
 
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
   const [form, setForm] = useState({
     suna: "",
