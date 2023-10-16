@@ -1,0 +1,80 @@
+  .backdrop{
+    position: absolute;
+    width: 1607px;
+    height: 1512px;
+    flex-shrink: 0;
+    flex-shrink: 0;
+    background: rgba(21, 14, 40, 0.93);
+    z-index: 1;
+    top: -27%;
+  }
+
+  .picture{
+    border-radius: 5px;
+      border: 1px solid #D434FE;
+      background: rgba(255, 255, 255, 0.01);
+      position: absolute;
+      z-index: 58;
+      width:50%;
+      height:60vh;
+      margin:4% 26%;
+      flex-shrink: 0;
+
+
+      & .imgDiv{
+        display: flex;
+        justify-content: center;
+        margin-top:25px;
+
+        & img{
+          width:22%;
+        }
+      }
+
+
+      & .p1{
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top:30;
+      }
+
+      & .p2{
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top:40px;
+      }
+
+      .emoji{
+        margin-left:8px;
+      }
+
+      & .btn{
+        border-radius: 4px;
+      background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+      width:80%;
+      height: 40px;
+      
+      }
+
+      & .backDiv{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 81%;
+      }
+      
+      & .star1{
+        
+      }
+  }

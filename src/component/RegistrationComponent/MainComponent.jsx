@@ -1,14 +1,26 @@
 import styles from "./MainComponent.module.scss";
 import TechGuy from "../../assets/TechGuy.png";
+import star2 from "../../assets/star1.png";
+import star3 from "../../assets/star22.png";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Modal from "./Modal";
+
+
+
+
 
 import { useNavigate } from "react-router-dom";
 
 function MainComponent() {
   const nav = useNavigate();
+
+
+  const [openModal, setOpenModal] = useState(false)
+
+
 
   const [form, setForm] = useState({
     suna: "",
@@ -23,6 +35,8 @@ function MainComponent() {
   const [term, setTerm] = useState(false);
 
   const { suna, waya, email, topic } = form;
+
+  
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -93,7 +107,7 @@ function MainComponent() {
             "Content-Type": "application/json",
           },
         });
-        toast.success("your message has been sent succefully");
+       
 
         //  setForm({
         //   waya: '',
@@ -102,19 +116,49 @@ function MainComponent() {
         //   topic: '',
         // })
 
-        nav("/");
+        setOpenModal(true)
         // Handle a successful response here
         console.log("Response:", response.data);
       } catch (error) {}
     }
   };
 
+
+
+
+
+
+
+
+
+
+
   return (
+    <div style={{position:'relative'}}>
     <section className={styles.MainContainer}>
+
+        <Modal openModal={openModal}/>
+
+
+      <img  
+      className={`${styles.star1} ${styles.blink3}`}
+       src={star3}
+      />
+
+      <img 
+      className={`${styles.star2} ${styles.blink}`}
+       src={star2}
+      />
       <div className={styles.imgDiv}>
         <img className={styles.TechGuy} src={TechGuy} />
       </div>
-      <div className={styles.formDiv}>
+      <div 
+      style={{position:'relative'}}
+      className={styles.formDiv}>
+      <img 
+                  className={`${styles.star3} ${styles.blink}`}
+                  src={star2}
+             />
         <div>
           <h3 style={{ marginLeft: "10%" }}>Register</h3>
           <p style={{ marginLeft: "10%" }}>Be part of this movement!</p>
@@ -122,7 +166,11 @@ function MainComponent() {
           <h3 style={{ marginLeft: "10%" }}>Create Your Account</h3>
 
           <form onSubmit={onSubmit}>
-            <div className={styles.formDivider} style={{ marginLeft: "10%" }}>
+            <div className={styles.formDivider} style={{ marginLeft: "10%",
+             }}>
+
+            
+
               <div className={styles.inputDiv}>
                 <label>Team's Name</label>
                 <br></br>
@@ -230,6 +278,7 @@ function MainComponent() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 

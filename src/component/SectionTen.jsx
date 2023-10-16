@@ -7,9 +7,6 @@ import star2 from "../assets/star1.png";
 import star1 from "../assets/star.png";
 import star3 from "../assets/star22.png";
 
-
-
-
 function SectionTen() {
   const { ref: arrowRef, inView: arrowInView } = useInView({
     threshold: 0.5, // Adjust the threshold as needed for larger screens
@@ -59,32 +56,18 @@ function SectionTen() {
     <>
       <div className={styles.line}></div>
       <section ref={arrowRef} className={styles.container}>
-        
         <motion.div
           variants={arrowVariant}
           animate={arrowInView ? "visible" : "hidden"}
           initial="hidden"
           className={styles.sec1}
         >
-          <div 
-           style={{position:"relative"}}
-          className={styles.title}>
-            <img 
-            className={`${styles.star1} ${styles.blink}`}
-            src={star2}
-            />
-            <p
-            className={styles.p1}
-            >Privacy Policy and </p>
-            <p
-             className={styles.p2}
-            > Terms</p>
-            <p
-            className={styles.p3}
-            >Last updated on September 12, 2023</p>
-            <p
-             className={styles.p3}
-            >
+          <div style={{ position: "relative" }} className={styles.title}>
+            <img className={`${styles.star1} ${styles.blink}`} src={star2} />
+            <p className={styles.p1}>Privacy Policy and </p>
+            <p className={styles.p2}> Terms</p>
+            <p className={styles.p3}>Last updated on September 12, 2023</p>
+            <p className={styles.p3}>
               Below are our privacy & policy, which outline a lot of goodies.
               it’s our aim to always take of our participant
             </p>
@@ -110,39 +93,20 @@ function SectionTen() {
               sites, for your project developement
             </p>
 
-            <p 
-             className={styles.btn}
-            >Read More</p>
+            <p className={styles.btn}>Read More</p>
           </div>
         </motion.div>
 
-        <div 
-        style={{position:'relative'}}
-        ref={introductionRef}>
-        <img 
-           className={`${styles.star2} ${styles.blink2}`}
-            src={star3}
-            />
+        <div style={{ position: "relative" }} ref={introductionRef}>
+          <img className={`${styles.star2} ${styles.blink2}`} src={star3} />
 
-           <img 
-           className={`${styles.star3} ${styles.blink3}`}
-            src={star1}
-            />
+          <img className={`${styles.star3} ${styles.blink3}`} src={star1} />
 
-            <img 
-            className={`${styles.star4} ${styles.blink}`}
-            src={star1}
-            />
+          <img className={`${styles.star4} ${styles.blink}`} src={star1} />
 
-            <img 
-           className={`${styles.star5} ${styles.blink2}`}
-            src={star3}
-            />
+          <img className={`${styles.star5} ${styles.blink2}`} src={star3} />
 
-            <img 
-            className={`${styles.star6} ${styles.blink3}`}
-            src={star2}
-            />
+          <img className={`${styles.star6} ${styles.blink3}`} src={star2} />
           <motion.div
             variants={boxVariant}
             animate={arrowInView ? "visible" : "hidden"}

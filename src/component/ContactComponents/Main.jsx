@@ -5,6 +5,9 @@ import facebook from "../../assets/facebook.svg";
 import twitter from "../../assets/twitter.svg";
 import instagram from "../../assets/instagram.svg";
 import linkedel from "../../assets/linkedel.svg";
+import star2 from "../../assets/star1.png";
+import star1 from "../../assets/star.png";
+import star3 from "../../assets/star22.png";
 import axios from "axios";
 import { toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -93,27 +96,64 @@ function Main() {
   };
 
   return (
-    <section className={styles.MainContainer}>
+    <section
+     style={{position:'relative'}}
+    className={styles.MainContainer}>
+      <img
+      className={`${styles.star1} ${styles.blink}`}
+       src={star3}
+      />
+      <img
+      className={`${styles.star2} ${styles.blink2}`}
+       src={star2}
+      />
+      <img
+      className={`${styles.star3} ${styles.blink3}`}
+       src={star3}
+      />
+      <img
+       className={`${styles.star4} ${styles.blink2}`}
+       src={star1}
+      />
       <div className={styles.header}>
         <div className={styles.header1}>
-          <p>Get in touch</p>
-          <p>
+          <p
+          style={{color:'#D434FE',
+          fontSize:'20px',
+          marginBottom:'10px'}}
+          >Get in touch</p>
+          <p
+           style={{
+           marginBottom:'10px'}}
+          >
             Contact <br></br>
             Information
           </p>
-          <p>
+          <p
+          style={{
+          marginBottom:'10px'}}
+          >
             27,Alara Street <br></br>
             Yaba 100012 <br></br>
             Lagos State
           </p>
-          <p>Call Us : 07067981819</p>
-          <p>
+          <p
+          style={{
+            marginBottom:'10px'}}
+          >Call Us : 07067981819</p>
+          <p
+           style={{
+            marginBottom:'10px'}}
+          >
             we are open from Monday-Friday <br></br>
             08:00am - 05:00pm
           </p>
 
           <p>
-            <span className={styles.color}>Share on</span>
+            <span 
+            style={{
+             color:'#D434FE'}}
+            className={styles.color}>Share on</span>
             <br></br>
             <img className={styles.social} src={facebook} />
             <img className={styles.social} src={twitter} />
