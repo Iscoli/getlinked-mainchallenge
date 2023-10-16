@@ -32,7 +32,7 @@ function NavBar() {
   }, []);
 
   const Modal = () => {
-    console.log("hello world");
+    
     setModal(!modal);
   };
   const menuVars = {
@@ -142,19 +142,21 @@ function NavBar() {
           animate="animate"
           exit="exit"
           className={styles.modal}
-          style={{transformOrigin:'top'}}>
+          style={{transformOrigin:'top', position:'absolute',
+          top:'0'}}>
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 marginBottom: "30px",
+                overflow:'auto'
               }}
             >
                <Link
          style={{ textDecoration: "none", color: "#fff" }}
           to='/'
          >
-              <p>
+              <p style={{marginTop:'5px'}}>
                 get
                 <span>Linked</span>
               </p>
@@ -167,8 +169,9 @@ function NavBar() {
              initial="initial"
              animate="open"
              exit="initial"
+             style={{overflow:'auto'}}
             >
-            <p>
+            <p  style={{marginTop:'5px'}}>
               <a
                 style={{ textDecoration: "none", color: "#fff" }}
                 href="#timeline"
@@ -176,7 +179,7 @@ function NavBar() {
                 Timeline
               </a>
             </p>
-            <p>
+            <p style={{marginTop:'5px'}}>
               <a
                 style={{ textDecoration: "none", color: "#fff" }}
                 href="#overview"
@@ -184,12 +187,12 @@ function NavBar() {
                 Overview
               </a>
             </p>
-            <p>
+            <p style={{marginTop:'5px'}}>
               <a style={{ textDecoration: "none", color: "#fff" }} href="#faqs">
                 FAQs
               </a>
             </p>
-            <p>
+            <p style={{marginTop:'5px'}}>
             <Link 
             style={{ textDecoration: "none", color: "#fff" }}
             to='/contact'>
@@ -197,7 +200,9 @@ function NavBar() {
               </Link>
             </p>
             <Link
-           style={{ textDecoration: "none", color: "#fff" }}
+           style={{ textDecoration: "none",
+            color: "#fff",
+          overflow:'hidden'}}
            to='/register'
            > 
            <button className={styles.btn}>Register</button></Link>

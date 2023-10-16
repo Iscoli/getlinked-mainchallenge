@@ -8,19 +8,12 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Modal from "./Modal";
 
-
-
-
-
 import { useNavigate } from "react-router-dom";
 
 function MainComponent() {
   const nav = useNavigate();
 
-
-  const [openModal, setOpenModal] = useState(false)
-
-
+  const [openModal, setOpenModal] = useState(false);
 
   const [form, setForm] = useState({
     suna: "",
@@ -35,8 +28,6 @@ function MainComponent() {
   const [term, setTerm] = useState(false);
 
   const { suna, waya, email, topic } = form;
-
-  
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -107,177 +98,146 @@ function MainComponent() {
             "Content-Type": "application/json",
           },
         });
-       
 
-        //  setForm({
-        //   waya: '',
-        //   email: '',
-        //   suna:'',
-        //   topic: '',
-        // })
-
-        setOpenModal(true)
+        setOpenModal(true);
         // Handle a successful response here
         console.log("Response:", response.data);
       } catch (error) {}
     }
   };
 
-
-
-
-
-
-
-
-
-
-
   return (
-    <div style={{position:'relative'}}>
-    <section className={styles.MainContainer}>
+    <div style={{ position: "relative" }}>
+      <section className={styles.MainContainer}>
+        <Modal openModal={openModal} />
 
-        <Modal openModal={openModal}/>
+        <img className={`${styles.star1} ${styles.blink3}`} src={star3} />
 
-
-      <img  
-      className={`${styles.star1} ${styles.blink3}`}
-       src={star3}
-      />
-
-      <img 
-      className={`${styles.star2} ${styles.blink}`}
-       src={star2}
-      />
-      <div className={styles.imgDiv}>
-        <img className={styles.TechGuy} src={TechGuy} />
-      </div>
-      <div 
-      style={{position:'relative'}}
-      className={styles.formDiv}>
-      <img 
-                  className={`${styles.star3} ${styles.blink}`}
-                  src={star2}
-             />
-        <div>
-          <h3 style={{ marginLeft: "10%" }}>Register</h3>
-          <p style={{ marginLeft: "10%" }}>Be part of this movement!</p>
-
-          <h3 style={{ marginLeft: "10%" }}>Create Your Account</h3>
-
-          <form onSubmit={onSubmit}>
-            <div className={styles.formDivider} style={{ marginLeft: "10%",
-             }}>
-
-            
-
-              <div className={styles.inputDiv}>
-                <label>Team's Name</label>
-                <br></br>
-                <input
-                  type="name"
-                  placeholder="Enter the name of the group"
-                  name="suna"
-                  value={suna}
-                  onChange={onChange}
-                />
-              </div>
-
-              <div className={styles.inputDiv}>
-                <label>Phone</label>
-                <br></br>
-                <input
-                  type="name"
-                  placeholder="Enter your phone number"
-                  name="waya"
-                  value={waya}
-                  onChange={onChange}
-                />
-              </div>
-            </div>
-            <div className={styles.formDivider} style={{ marginLeft: "10%" }}>
-              <div className={styles.inputDiv}>
-                <label>Email</label>
-                <br></br>
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  name="email"
-                  value={email}
-                  onChange={onChange}
-                />
-              </div>
-
-              <div className={styles.inputDiv}>
-                <label>Project Topic</label>
-                <br></br>
-                <input
-                  type="text"
-                  placeholder="Enter your project topic"
-                  name="topic"
-                  value={topic}
-                  onChange={onChange}
-                />
-              </div>
-            </div>
-
-            <div className={styles.formDivider} style={{ marginLeft: "10%" }}>
-              <div className={styles.inputDiv}>
-                <label>Category</label>
-                <br></br>
-                <select value={selectedOption} onChange={handleSelectChange}>
-                  <option value="">Select your category</option>
-                  <option value="1">category1</option>
-                  <option value="2">category2</option>
-                  <option value="3">category3</option>
-                </select>
-              </div>
-
-              <div className={styles.inputDiv}>
-                <label>Group Size</label>
-                <br></br>
-                <select value={selectedOption1} onChange={handleSelectChange1}>
-                  <option>Select </option>
-                  <option value="10">10</option>
-                  <option value="20">20</option>
-                  <option value="30">30</option>
-                </select>
-              </div>
-            </div>
-
-            <p style={{ marginLeft: "10%" }}>
-              Please review your registration details before submitting
-            </p>
-
-            <div
-              style={{
-                marginLeft: "10%",
-                marginTop: "10px",
-                marginBottom: "10px",
-              }}
-            >
-              <input
-                type="radio"
-                checked={term === true}
-                onChange={handleTerms}
-              />
-              <label style={{ marginLeft: "10px" }}>
-                I agreed with the event terms and conditions and privacy policy
-              </label>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <button className={styles.RegisterBtn}>Register</button>
-            </div>
-          </form>
+        <img className={`${styles.star2} ${styles.blink}`} src={star2} />
+        <div className={styles.imgDiv}>
+          <img className={styles.TechGuy} src={TechGuy} />
         </div>
-      </div>
-    </section>
+        <div style={{ position: "relative" }} className={styles.formDiv}>
+          <img className={`${styles.star3} ${styles.blink}`} src={star2} />
+          <div>
+            <h3 style={{ marginLeft: "10%" }}>Register</h3>
+            <p style={{ marginLeft: "10%" }}>Be part of this movement!</p>
+
+            <h3 style={{ marginLeft: "10%" }}>Create Your Account</h3>
+
+            <form onSubmit={onSubmit}>
+              <div className={styles.formDivider} style={{ marginLeft: "10%" }}>
+                <div className={styles.inputDiv}>
+                  <label>Team's Name</label>
+                  <br></br>
+                  <input
+                    type="name"
+                    placeholder="Enter the name of the group"
+                    name="suna"
+                    value={suna}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className={styles.inputDiv}>
+                  <label>Phone</label>
+                  <br></br>
+                  <input
+                    type="name"
+                    placeholder="Enter your phone number"
+                    name="waya"
+                    value={waya}
+                    onChange={onChange}
+                  />
+                </div>
+              </div>
+              <div className={styles.formDivider} style={{ marginLeft: "10%" }}>
+                <div className={styles.inputDiv}>
+                  <label>Email</label>
+                  <br></br>
+                  <input
+                    type="email"
+                    placeholder="Enter Your Email"
+                    name="email"
+                    value={email}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className={styles.inputDiv}>
+                  <label>Project Topic</label>
+                  <br></br>
+                  <input
+                    type="text"
+                    placeholder="Enter your project topic"
+                    name="topic"
+                    value={topic}
+                    onChange={onChange}
+                  />
+                </div>
+              </div>
+
+              <div className={styles.formDivider} style={{ marginLeft: "10%" }}>
+                <div className={styles.inputDiv}>
+                  <label>Category</label>
+                  <br></br>
+                  <select value={selectedOption} onChange={handleSelectChange}>
+                    <option value="">Select your category</option>
+                    <option value="1">category1</option>
+                    <option value="2">category2</option>
+                    <option value="3">category3</option>
+                  </select>
+                </div>
+
+                <div className={styles.inputDiv}>
+                  <label>Group Size</label>
+                  <br></br>
+                  <select
+                    value={selectedOption1}
+                    onChange={handleSelectChange1}
+                  >
+                    <option>Select </option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                  </select>
+                </div>
+              </div>
+
+              <p style={{ marginLeft: "10%" }}>
+                Please review your registration details before submitting
+              </p>
+
+              <div
+                style={{
+                  marginLeft: "10%",
+                  marginTop: "10px",
+                  marginBottom: "10px",
+                }}
+              >
+                <input
+                  type="radio"
+                  checked={term === true}
+                  onChange={handleTerms}
+                />
+                <label style={{ marginLeft: "10px" }}>
+                  I agreed with the event terms and conditions and privacy
+                  policy
+                </label>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <button className={styles.RegisterBtn}>Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
