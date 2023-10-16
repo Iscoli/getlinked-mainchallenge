@@ -21,9 +21,16 @@ function Modal({ openModal }) {
       {openModal && (
         <div>
           <img className={styles.star1} src={star3} />
-          <img src={star3} />
+         
           <div className={styles.backdrop}></div>
           <div className={styles.picture}>
+          <img 
+         className={`${styles.star1} ${styles.blink3}`}
+          src={star3} />
+
+          <img 
+         className={`${styles.star2} ${styles.blink}`}
+          src={star3} />
             <div className={styles.imgDiv}>
               <img
                 styles={{ marginTop: "40px" }}
