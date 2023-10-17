@@ -119,9 +119,12 @@ function NavBar() {
         <div>
           {isLargeScreen ? (
            <Link
-           style={{ textDecoration: "none", color: "#fff" }}
+           style={{ textDecoration: "none", 
+           color: "#fff" }}
            to='/register'
-           > <button>
+           > <button
+            style={{cursor:'pionter'}}
+           >
               Register
               </button>
               </Link>
@@ -142,8 +145,7 @@ function NavBar() {
           animate="animate"
           exit="exit"
           className={styles.modal}
-          style={{transformOrigin:'top', position:'absolute',
-          top:'0'}}>
+          style={{transformOrigin:'top'}}>
             <div
               style={{
                 display: "flex",
