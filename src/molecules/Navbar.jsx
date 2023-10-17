@@ -33,7 +33,7 @@ function NavBar() {
 
   const Modal = () => {
     
-    setModal(!modal);
+    setModal((modal)=> !modal);
   };
   const menuVars = {
     initial: {
@@ -145,13 +145,15 @@ function NavBar() {
           animate="animate"
           exit="exit"
           className={styles.modal}
-          style={{transformOrigin:'top'}}>
+          style={{transformOrigin:'top',
+          overflow:'hidden !important'
+          }}>
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 marginBottom: "30px",
-                overflow:'auto'
+                overflow:'hidden !important'
               }}
             >
                <Link
@@ -171,12 +173,13 @@ function NavBar() {
              initial="initial"
              animate="open"
              exit="initial"
-             style={{overflow:'auto'}}
+             style={{ overflow: 'hidden !important' }}
             >
             <p  style={{marginTop:'5px'}}>
               <a
                 style={{ textDecoration: "none", color: "#fff" }}
                 href="#timeline"
+                onClick={Modal}
               >
                 Timeline
               </a>
@@ -185,27 +188,34 @@ function NavBar() {
               <a
                 style={{ textDecoration: "none", color: "#fff" }}
                 href="#overview"
+                onClick={Modal}
               >
                 Overview
               </a>
             </p>
             <p style={{marginTop:'5px'}}>
-              <a style={{ textDecoration: "none", color: "#fff" }} href="#faqs">
+              <a style={{ textDecoration: "none", color: "#fff" }} href="#faqs"
+              onClick={Modal}
+              >
                 FAQs
               </a>
             </p>
             <p style={{marginTop:'5px'}}>
             <Link 
             style={{ textDecoration: "none", color: "#fff" }}
-            to='/contact'>
+            to='/contact'
+            onClick={Modal}
+            >
               Contact{" "}
               </Link>
             </p>
             <Link
            style={{ textDecoration: "none",
             color: "#fff",
-          overflow:'hidden'}}
+          overflow:'hidden !important'}}
+          onClick={Modal}
            to='/register'
+           
            > 
            <button className={styles.btn}>Register</button></Link>
            </motion.div>
